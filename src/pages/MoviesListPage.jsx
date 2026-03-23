@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import MovieCard from "../components/MovieCard"
+import movies from "../data/moviesData";
 
 function MoviesListPage() {
     const navigate = useNavigate();
@@ -8,14 +9,10 @@ function MoviesListPage() {
             <div className="boxed moviesList">
                 <h1>Lista dei film!</h1>
                 <div className="moviesContainer">
-                    <MovieCard />
-                    <MovieCard />
-                    <MovieCard />
-                    <MovieCard />
-                    <MovieCard />
-                    <MovieCard />
-                    <MovieCard />
-                    <MovieCard />
+                    {movies.map((movie, index) => {
+                        return <MovieCard movie={movie} id={index} />
+                    })}
+
                 </div>
             </div>
         </main>
@@ -24,3 +21,4 @@ function MoviesListPage() {
 
 export default MoviesListPage
 {/* <button className="btn" onClick={() => navigate("")}>Vai alla lista dei film!</button> */ }
+{/* <MovieCard /> */ }

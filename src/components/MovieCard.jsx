@@ -1,17 +1,18 @@
-import image from "../assets/matrix_reloaded.jpg";
+// import image from "../assets/matrix_reloaded.jpg";
 
-function Card() {
+function Card({ movie, id }) {
+    const { title, director, genre, release, abstract, image } = movie;
     return (
-        <div className="flipCard">
+        <div className="flipCard" key={id}>
             <div className="flipCardInner">
                 <div className="flipCardFront">
-                    <img src={image} alt="Avatar" />
+                    <img src={`./${image}`} alt={title} />
                 </div>
                 <div className="flipCardBack">
-                    <h2>Title</h2>
-                    <p>Director</p>
-                    <p>Genre</p>
-                    <button className="btn justifySelfBot" onClick={() => navigate("")}>Dettagli</button>
+                    <h2>{title}</h2>
+                    <p>{director}</p>
+                    <p>{genre}</p>
+                    <button className="btn justifySelfBot" onClick={() => navigate(`/movies/${id}`)}>Dettagli</button>
                 </div>
             </div>
         </div>
