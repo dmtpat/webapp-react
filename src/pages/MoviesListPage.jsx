@@ -9,6 +9,13 @@ function MoviesListPage() {
                 <h1>Lista dei film!</h1>
                 <div className="moviesContainer">
                     <MovieCard />
+                    <MovieCard />
+                    <MovieCard />
+                    <MovieCard />
+                    <MovieCard />
+                    <MovieCard />
+                    <MovieCard />
+                    <MovieCard />
                 </div>
             </div>
         </main>

@@ -11,6 +11,7 @@ function Card() {
                     <h2>Title</h2>
                     <p>Director</p>
                     <p>Genre</p>
+                    <button className="btn justifySelfBot" onClick={() => navigate("")}>Dettagli</button>
                 </div>
             </div>
         </div>

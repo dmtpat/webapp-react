@@ -60,6 +60,11 @@ body {
   color: var(--primary-text-color);
 }
 
+.justifySelfBot {
+  margin-bottom: 0rem;
+  margin-top: auto;
+}
+
 /*-----------------------Home-Page---------------------------------*/
 .homePage {
   margin-top: 5rem;
@@ -107,6 +112,7 @@ body {
   border-radius: 5px;
   perspective: 1000px;
   /* for 3D effect */
+  margin-bottom: 1rem;
 }
 
 /* This container is needed to position the front and back side */
@@ -150,6 +156,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
+}
+
+.flipCardBack * {
+  margin-bottom: 1rem;
 }
 
 .flipCard img {
