@@ -50,3 +50,7 @@ Questa è la ricetta per arrivare a ottenere un scffold base per progetti con re
 
     export default App
     ```
+- creazione delle catelle e dei componenti
+    1. creazione della cartella pages in src con all'interno le nostre due pagine di base, Pagina.jsx e NotFound.jsx
+    2. creazione della cartella layouts in src con all'interno il file Layout.jsx
+    3. creazione della cartella components in src in cui saranno inseriti tutti i componenti del nostro progetto
