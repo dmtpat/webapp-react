@@ -7,7 +7,7 @@ function Pagina() {
             <div className="boxed homePage">
                 <h1>Benvenuto nell'app di ricerca film!</h1>
                 <p>In questa app è possibile visualizzare le informazioni di film come titolo, regista, data di uscita, genere e trama. È inoltre possibile visualizare le recensioni degli utenti.</p>
-                <button className="btn filmListLink" onClick={() => navigate("/films")}>Vai alla lista dei film!</button>
+                <button className="btn filmListLink" onClick={() => navigate("/movies")}>Vai alla lista dei film!</button>
             </div>
         </main>
     )

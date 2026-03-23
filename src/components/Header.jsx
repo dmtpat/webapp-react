@@ -4,6 +4,7 @@ function Header() {
     return (
         <header className="header">
             <NavLink to="/">Home</NavLink>
+            <NavLink to="/films">Films</NavLink>
             <NavLink to="/otherPage">Other</NavLink>
         </header>
     )

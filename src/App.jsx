@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./layouts/Layout";
-import Pagina from "./pages/Pagina";
+import HomePage from "./pages/HomePage";
+import MoviesListPage from "./pages/MoviesListPage";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route Component={Layout}>
-          <Route path="/" Component={Pagina} ></Route>
+          <Route path="/" Component={HomePage} ></Route>
+          <Route path="/movies" Component={MoviesListPage} ></Route>
           <Route path="*" Component={NotFound} ></Route>
         </Route>
       </Routes >
