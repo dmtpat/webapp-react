@@ -1,7 +1,12 @@
 
 function NotFound() {
     return (
-        <h1>NotFound</h1>
+        <main>
+            <div className="boxed">
+                <h1>NotFound</h1>
+            </div>
+        </main>
+
     )
 }
 

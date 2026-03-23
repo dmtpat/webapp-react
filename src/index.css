@@ -1,3 +1,11 @@
+:root {
+  /* global scope */
+  --primary-bg-color: #222;
+  --secondary-bg-color: #404040;
+  --primary-text-color: #fffffe;
+  --secondary-text-color: #000f0f;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,13 +13,14 @@
 }
 
 body {
-  background-color: #222;
-  color: white;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
   font-family: sans-serif;
 }
 
+/*-----------------------header-----------------------------*/
 .header {
-  background-color: #404040;
+  background-color: var(--secondary-bg-color);
   height: 7rem;
   padding: 3rem;
 
@@ -19,6 +28,46 @@ body {
 
 .header a {
   margin: 2rem;
-  color: #fffffe;
+  color: var(--primary-text-color);
   text-decoration: none;
+}
+
+.header a.active {
+  text-decoration: underline;
+  text-decoration-thickness: 0.5rem;
+  text-underline-offset: 2.5rem;
+}
+
+/*------------------general----------------------------------*/
+.boxed {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+
+.btn {
+  background-color: transparent;
+  padding: 1rem;
+  border-radius: 10px;
+  border-color: var(--primary-text-color);
+  color: var(--primary-text-color);
+  margin: 0.5rem;
+}
+
+.btn:hover {
+  background-color: var(--secondary-bg-color);
+  border-color: var(--secondary-text-color);
+  color: var(--primary-text-color);
+}
+
+/*-----------------------Home-Page---------------------------------*/
+.homePage {
+  margin-top: 5rem;
+  padding: 0 5rem;
+  text-align: center;
+  line-height: 5rem;
+}
+
+.filmListLink {
+  margin: 5rem 0;
 }
