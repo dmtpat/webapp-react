@@ -8,12 +8,12 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={Layout}>
-          <Route path="/" element={Pagina} />
-          <Route path="*" element={NotFound} />
+        <Route Component={Layout}>
+          <Route path="/" Component={Pagina} ></Route>
+          <Route path="*" Component={NotFound} ></Route>
         </Route>
-      </Routes>
-    </BrowserRouter>
+      </Routes >
+    </BrowserRouter >
   )
 }
 

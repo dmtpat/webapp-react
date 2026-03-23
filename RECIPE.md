@@ -29,7 +29,7 @@ Questa è la ricetta per arrivare a ottenere un scffold base per progetti con re
 - Inizzazione di react router con `npm install react-router-dom` nel terminale;
 - Creare una base di navigazione tra pagine in app.jsx
     ```
-    import { BrowserRouter, Route, Routes } from "react-router-dom";
+   import { BrowserRouter, Route, Routes } from "react-router-dom";
     import Layout from "./layouts/Layout";
     import Pagina from "./pages/Pagina";
     import NotFound from "./pages/NotFound";
@@ -39,18 +39,65 @@ Questa è la ricetta per arrivare a ottenere un scffold base per progetti con re
     return (
         <BrowserRouter>
         <Routes>
-            <Route element={Layout}>
-            <Route path="/" element={Pagina} />
-            <Route path="*" element={NotFound} />
+            <Route Component={Layout}>
+            <Route path="/" Component={Pagina} ></Route>
+            <Route path="*" Component={NotFound} ></Route>
             </Route>
-        </Routes>
-        </BrowserRouter>
+        </Routes >
+        </BrowserRouter >
     )
     }
 
     export default App
     ```
-- creazione delle catelle e dei componenti
-    1. creazione della cartella pages in src con all'interno le nostre due pagine di base, Pagina.jsx e NotFound.jsx
-    2. creazione della cartella layouts in src con all'interno il file Layout.jsx
-    3. creazione della cartella components in src in cui saranno inseriti tutti i componenti del nostro progetto
+- creazione delle catelle e dei componenti;
+    1. creazione della cartella pages in src con all'interno le nostre due pagine di base, Pagina.jsx e NotFound.jsx, creare una funzione base allinterno delle pagine:
+    ```
+    //Pagina.jsx
+    function Pagina() {
+        return (
+            <h1>pagina</h1>
+        )
+    }
+    export default Pagina
+
+    //NotFound.jsx
+    function NotFound() {
+        return (
+                <h1>NotFound</h1>
+            )
+        }
+    export default NotFound
+    ```
+    2. creazione della cartella layouts in src con all'interno il file Layout.jsx;
+    3. creazione della cartella components in src in cui saranno inseriti tutti i componenti del nostro progetto;
+- creare un componente Header.jsx in components con una base così:
+    ```
+    import { NavLink } from "react-router-dom";
+
+    function Header() {
+        return (
+            <header className="header">
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/otherPage">Other</NavLink>
+            </header>
+        )
+    }
+    export default Header
+    ```
+    utillizzando il componente di NavLink di react-router;
+- Impostiamo la pagina di layout utilizzando il componente di react Outlet e il componente Header precedentemente creato:
+    ```
+    import { Outlet } from "react-router-dom";
+    import Header from "../components/Header"
+
+    function Layout() {
+        return (<>
+            <Header />
+            <Outlet />
+        </>
+        )
+    }
+
+    export default Layout
+    ```
