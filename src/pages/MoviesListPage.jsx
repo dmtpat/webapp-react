@@ -10,7 +10,7 @@ function MoviesListPage() {
                 <h1>Lista dei film!</h1>
                 <div className="moviesContainer">
                     {movies.map((movie, index) => {
-                        return <MovieCard movie={movie} id={index} />
+                        return <MovieCard movie={movie} />
                     })}
 
                 </div>

@@ -1,5 +1,6 @@
 const movies = [
     {
+        "id": 1,
         "title": "Inception",
         "director": "Christopher Nolan",
         "genre": "Science Fiction",
@@ -8,6 +9,7 @@ const movies = [
         "image": "inception.jpg"
     },
     {
+        "id": 2,
         "title": "The Godfather",
         "director": "Francis Ford Coppola",
         "genre": "Crime",
@@ -16,6 +18,7 @@ const movies = [
         "image": "the_godfather.jpg"
     },
     {
+        "id": 3,
         "title": "Titanic",
         "director": "James Cameron",
         "genre": "Romance",
@@ -24,6 +27,7 @@ const movies = [
         "image": "titanic.jpg"
     },
     {
+        "id": 4,
         "title": "The Matrix",
         "director": "The Wachowskis",
         "genre": "Action",
@@ -32,6 +36,7 @@ const movies = [
         "image": "matrix.jpg"
     },
     {
+        "id": 5,
         "title": "Interstellar",
         "director": "Christopher Nolan",
         "genre": "Science Fiction",
@@ -40,6 +45,7 @@ const movies = [
         "image": "interstellar.jpg"
     },
     {
+        "id": 6,
         "title": "The Matrix Reloaded",
         "director": " Lana Wachowski e Lilly Wachowski",
         "genre": "science fiction",

@@ -1,9 +1,9 @@
 // import image from "../assets/matrix_reloaded.jpg";
 import { useNavigate } from "react-router-dom";
 
-function Card({ movie, id }) {
+function Card({ movie }) {
     const navigate = useNavigate();
-    const { title, director, genre, release, abstract, image } = movie;
+    const { id, title, director, genre, release, abstract, image } = movie;
     return (
         <div className="flipCard" key={id}>
             <div className="flipCardInner">
