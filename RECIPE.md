@@ -24,3 +24,29 @@ Questa è la ricetta per arrivare a ottenere un scffold base per progetti con re
 - eliminare il contenuto della cartella public e spostrci il file vite.svg dalla cartella assets e eliminare il contenuto della cartella;
 - cambiare in index.html il collegamento dell'icona nell'Header della pagina con vite.svg;
 
+## avvio app con router e pagine dinamiche 
+
+- Inizzazione di react router con `npm install react-router-dom` nel terminale;
+- Creare una base di navigazione tra pagine in app.jsx
+    ```
+    import { BrowserRouter, Route, Routes } from "react-router-dom";
+    import Layout from "./layouts/Layout";
+    import Pagina from "./pages/Pagina";
+    import NotFound from "./pages/NotFound";
+
+    function App() {
+
+    return (
+        <BrowserRouter>
+        <Routes>
+            <Route element={Layout}>
+            <Route path="/" element={Pagina} />
+            <Route path="*" element={NotFound} />
+            </Route>
+        </Routes>
+        </BrowserRouter>
+    )
+    }
+
+    export default App
+    ```
