@@ -1,12 +1,22 @@
 import { useParams } from "react-router-dom";
-import movies from "../data/moviesData"
+// import movies from "../data/moviesData"
 import ReviewCard from "../components/ReviewCard";
-import reviews from "../data/reiewsData"
+// import reviews from "../data/reiewsData"
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 function MoviePage() {
     const { id } = useParams();
-    const movie = movies.find(movie => movie.id == Number(id));
-    const movieReviews = reviews.filter(review => review.movie_id == id);
+    const [movie, setMovie] = useState({});
+
+    useEffect(() => {
+        axios.get(`http://localhost:3000/api/movies/${id}`).then(
+            res => {
+                console.log(res.data);
+                setMovie(res.data);
+            }).catch(err => console.error(err.message));
+    }, [id]);
+
     return (
         <main>
             <div className="boxed">
@@ -24,7 +34,7 @@ function MoviePage() {
                     </div>
                     <div className="reviewsContainer">
                         {
-                            movieReviews.map(review => {
+                            movie.reviews?.map(review => {
                                 return <ReviewCard review={review} />
                             })
                         }
