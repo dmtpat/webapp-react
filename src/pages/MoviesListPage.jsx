@@ -1,16 +1,21 @@
-
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import MovieCard from "../components/MovieCard"
-import movies from "../data/moviesData";
+// import movies from "../data/moviesData";
 import axios from "axios";
 
 function MoviesListPage() {
     const navigate = useNavigate();
 
-    axios.get("http://localhost:3000/api/movies").then(
-        res => {
-            console.log(res.data);
-        }).catch(err => console.error(err.message));
+    const [movies, setMovies] = useState([]);
+
+    useEffect(() => {
+        axios.get("http://localhost:3000/api/movies").then(
+            res => {
+                console.log(res.data);
+                setMovies(res.data);
+            }).catch(err => console.error(err.message));
+    }, []);
 
     return (
         <main>
