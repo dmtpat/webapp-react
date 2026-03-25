@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 function Card({ movie }) {
     const navigate = useNavigate();
-    const { id, title, director, genre, release, abstract, image } = movie;
+    const { id, title, director, genre, release_year, abstract, image } = movie;
     return (
         <div className="flipCard" key={id}>
             <div className="flipCardInner">
@@ -14,7 +14,9 @@ function Card({ movie }) {
                     <h2>{title}</h2>
                     <p>{director}</p>
                     <p>{genre}</p>
-                    <button className="btn justifySelfBot" onClick={() => navigate(`/movies/${id}`)}>Dettagli</button>
+                    <p>{release_year}</p>
+                    <p>{abstract}</p>
+                    <button className="btn justifySelfBot" onClick={() => navigate(`/movies/${id}`)}>Reviews</button>
                 </div>
             </div>
         </div>
