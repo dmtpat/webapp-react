@@ -2,13 +2,14 @@
 import { useNavigate } from "react-router-dom";
 
 function Card({ movie }) {
+    const connection = `http://localhost:3000/image/`
     const navigate = useNavigate();
     const { id, title, director, genre, release_year, abstract, image } = movie;
     return (
         <div className="flipCard" key={id}>
             <div className="flipCardInner">
                 <div className="flipCardFront">
-                    <img src={`./${image}`} alt={title} />
+                    <img src={connection + image} alt={title} />
                 </div>
                 <div className="flipCardBack">
                     <h2>{title}</h2>
