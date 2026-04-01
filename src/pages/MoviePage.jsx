@@ -16,7 +16,7 @@ function MoviePage() {
                 setMovie(res.data);
             }).catch(err => console.error(err.message));
     }, [id]);
-
+    const connection = `http://localhost:3000/image/`
     return (
         <main>
             <div className="boxed">
@@ -24,7 +24,7 @@ function MoviePage() {
                 <h1>{movie.title}</h1>
                 <div className="movieDetails">
                     <div className="detailsHeader">
-                        <img src={`../${movie.image}`} alt={movie.title} />
+                        <img src={connection + movie.image} alt={movie.title} />
                     </div>
                     <div className="detailsText">
                         <p>Regista: <strong>{movie.director}</strong> </p>
@@ -33,11 +33,17 @@ function MoviePage() {
                         <p>Trama: <strong>{movie.abstract}</strong></p>
                     </div>
                     <div className="reviewsContainer">
+                        <p>Media delle recensioni:{movie.avg}</p>
                         {
                             movie.reviews?.map(review => {
                                 return <ReviewCard review={review} />
                             })
                         }
+                    </div>
+                    <div className="newReview">
+                        <form action="">
+
+                        </form>
                     </div>
                 </div>
             </div>

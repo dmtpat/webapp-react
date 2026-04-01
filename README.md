@@ -60,3 +60,23 @@ Migliorate il layout come credete
 NOTE:
 Ricordatevi che dovrete lavorare con due VS Code aperti ognuno su un un progetto (express e react) e lanciare i relativi server di sviluppo
 Nel live coding pushato mancano le key quando si itera su qualcosa.map. Per far scomparire il warning assicuratevi di iterare correttamente. I vostri dati hanno un id 
+---
+## PT III
+
+### Milestone 1 - backend
+- Predisponiamo un nuovo endpoint nella webAPI per salvare nel database una nuova recensione legata ad un film
+- Testiamola su postman e verifichiamo che nel DB venga effettivamente inserita una nuova recensione
+
+### Milestone 2 - frontend
+- Creiamo un componente che contenga il form per le recensioni
+- Inseriamo questo componente nella pagina di dettaglio del film
+- All'invio del form evitiamo il reload della pagina e stampiamo in console tutti i dati presenti nel form (e l'id del film)
+- Disattiviamo lo strict mode
+- Se tutto funziona, usiamo questi dati per inviarli alla webapi tramite axios
+
+### milestone 3 - frontend
+- A inserimento avvenuto, chiamiamo dal componente del form un metodo del padre, per recuperare nuovamente i dettagli del movie
+- Testiamo tutto, riattiaviamo strict mode
+
+#### Bonus 
+- Inseriamo una validazione nel form di recensione. Possiamo usarla per attivare/disattivare il bottone di submit o per aggiungere dei bordi verde/rosso alle input, verificando con una funzione che i dati nello state rispettino alcune condizioni
