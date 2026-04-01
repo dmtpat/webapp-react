@@ -22,8 +22,8 @@ function MoviesListPage() {
             <div className="boxed moviesList">
                 <h1>Lista dei film!</h1>
                 <div className="moviesContainer">
-                    {movies.map((movie, index) => {
-                        return <MovieCard movie={movie} />
+                    {movies.map((movie, i) => {
+                        return (<div className="flipCard" key={i}><MovieCard movie={movie} /></div>)
                     })}
 
                 </div>

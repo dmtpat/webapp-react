@@ -37,8 +37,8 @@ function MoviePage() {
                     <div className="reviewsContainer">
                         <p>Media delle recensioni:{movie.avg}</p>
                         {
-                            movie.reviews?.map(review => {
-                                return <ReviewCard review={review} />
+                            movie.reviews?.map((review, i) => {
+                                return <div key={i}> <ReviewCard review={review} /></div>
                             })
                         }
                     </div>
