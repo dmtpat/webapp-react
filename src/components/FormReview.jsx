@@ -25,8 +25,9 @@ function FormReview({ movieId }) {
 
     return (
         <form onSubmit={handleSubmit}>
+            <h3>Inserisci una nuova recensione</h3>
             <div>
-                <h5>autore</h5>
+                <h5>Autore</h5>
                 <input type="text" name="name" placeholder="Inserisci il tuo nome" value={formData.name} onChange={setField} />
             </div>
             <div>
