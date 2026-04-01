@@ -5,6 +5,8 @@ import ReviewCard from "../components/ReviewCard";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+import FormReview from "../components/FormReview"
+
 function MoviePage() {
     const { id } = useParams();
     const [movie, setMovie] = useState({});
@@ -41,9 +43,7 @@ function MoviePage() {
                         }
                     </div>
                     <div className="newReview">
-                        <form action="">
-
-                        </form>
+                        <FormReview movieId={id} />
                     </div>
                 </div>
             </div>
